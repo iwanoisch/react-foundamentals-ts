@@ -4,14 +4,30 @@ import logo from './logo.svg';
 import './App.css';
 import {Confirm} from "./components/Confirm";
 
-class AppContent extends React.Component{
+interface State {
+    confirmOpen: boolean;
+    confirmMessage: string;
+}
 
-  private  handleOkClick = () => {
-    console.log('Ok clicked');
-  };
+class AppContent extends React.Component<{}, State>{
+    constructor(props: {}){
+        super(props);
+        this.state = {
+            confirmOpen: true,
+            confirmMessage: 'Please hit the confirm button',
+        }
+    }
 
-  private handleCancelClick= () => {
-    console.log('Cancel clicked');
+    private handleOkConfirmClick= () => {
+        this.setState({confirmOpen: false, confirmMessage: 'Cool, carry on reading!'});
+    };
+
+    private handleCancelConfirmClick  = () => {
+        this.setState({confirmOpen: false, confirmMessage: 'Take a break, I\'m sure you will later ...'});
+    };
+
+    private handleConfirmClick= () => {
+      this.setState({confirmOpen: true});
   };
 
   render(): React.ReactNode {
@@ -31,12 +47,16 @@ class AppContent extends React.Component{
               Learn React
             </a>
           </header>
-          <Confirm title="React and TypeScript"
-                   content="Are you sure you want to learn React and TypeScript?"
-                   cancelCaption="No way"
-                   okCaption="Yes please!"
-                   onCancelClick={this.handleCancelClick}
-                   onOkClick={this.handleOkClick}
+            <p>{this.state.confirmMessage}</p>
+            <button onClick={this.handleConfirmClick}>Confirm</button>
+          <Confirm
+              open={this.state.confirmOpen}
+              title="React and TypeScript"
+              content="Are you sure you want to learn React and TypeScript?"
+              cancelCaption="No way"
+              okCaption="Yes please!"
+              onCancelClick={this.handleCancelConfirmClick}
+              onOkClick={this.handleOkConfirmClick}
           />
         </div>
     )

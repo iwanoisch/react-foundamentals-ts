@@ -2,6 +2,7 @@ import * as React from "react";
 import "./Confirm.css"
 
 interface Props {
+    open: boolean;
     title: string;
     content: string;
     cancelCaption?: string;
@@ -25,7 +26,7 @@ class ConfirmComponent  extends React.Component<Props> {
 
     public render() {
         return (
-            <div className="confirm-wrapper confirm-visible">
+            <div className={this.props.open? 'confirm-wrapper confirm-visible' : 'confirm-wrapper'}>
                 <div className="confirm-container">
                     <div className="confirm-title-container">
                         <span>{this.props.title ? this.props.title : "React and TypeScript"}</span>

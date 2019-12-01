@@ -3,6 +3,8 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import {Confirm} from "./components/Confirm";
+import {ConfirmStateless} from "./components/ConfirmStateles";
+import {ConfirmStateFull} from "./components/ConfirmStateFull";
 
 interface State {
     confirmOpen: boolean;
@@ -69,7 +71,7 @@ class AppContent extends React.Component<{}, State>{
     // Questo è un metodo statico in una classe di componenti che restituisce lo stato
     // modificato o null se non sono presenti modifiche allo stato.
     public static getDerivedStateFromProps(props: {}, state: State) {
-            console.log('getDerivedStateFromProps', props, state);
+         //   console.log('getDerivedStateFromProps', props, state);
             return null;
     }
 
@@ -77,10 +79,10 @@ class AppContent extends React.Component<{}, State>{
     // Il valore cheviene restituito da getSnapshotBeforeUpdateviene passato a componentDidUpdate.
 
     public getSnapshotBeforeUpdate(prevProps: {}, prevState: State){
-        this.renderCount +=1 ;
-        console.log("getSnapshotBeforeUpdate", prevProps, prevState, {
-            renderCount: this.renderCount
-        });
+        // this.renderCount +=1 ;
+        // console.log("getSnapshotBeforeUpdate", prevProps, prevState, {
+        //     renderCount: this.renderCount
+        // });
         return this.renderCount;
     }
 
@@ -88,16 +90,16 @@ class AppContent extends React.Component<{}, State>{
     // Ridimensionare la finestradurante il rendering è un esempio di
     // quando getSnapshotBeforeUpdatepuò essere utile.
     public componentDidUpdate(prevProps: {}, prevState: {}, snapshot: number) {
-        console.log("componentDidUpdate", prevProps, prevState,
-            snapshot, {
-                renderCount: this.renderCount
-            });
+        // console.log("componentDidUpdate", prevProps, prevState,
+        //     snapshot, {
+        //         renderCount: this.renderCount
+        //     });
     }
     // viene invocato poco primail rendering avviene.
     // Restituisce un booleanovalore che determina se il rendering deve avvenire.
     // Può essere utilizzato per ottimizzare le prestazioni, evitando cicli di rendering non necessari.
     public shouldComponentUpdate(nextProps: {}, nextState: State, nextContext: any) {
-        console.log("shouldComponentUpdate", nextProps, nextState);
+       // console.log("shouldComponentUpdate", nextProps, nextState);
         return true;
     }
 
@@ -121,15 +123,36 @@ class AppContent extends React.Component<{}, State>{
           </header>
             <p>{this.state.confirmMessage}</p>
             <button onClick={this.handleConfirmClick}>Confirm</button>
-          <Confirm
-              open={this.state.confirmOpen}
-              title="React and TypeScript"
-              content="Are you sure you want to learn React and TypeScript?"
-              cancelCaption="No way"
-              okCaption="Yes please!"
-              onCancelClick={this.handleCancelConfirmClick}
-              onOkClick={this.handleOkConfirmClick}
-          />
+          {/*<Confirm*/}
+          {/*    open={this.state.confirmOpen}*/}
+          {/*    title="React and TypeScript"*/}
+          {/*    content="Are you sure you want to learn React and TypeScript?"*/}
+          {/*    cancelCaption="No way"*/}
+          {/*    okCaption="Yes please!"*/}
+          {/*    onCancelClick={this.handleCancelConfirmClick}*/}
+          {/*    onOkClick={this.handleOkConfirmClick}*/}
+          {/*/>*/}
+          {/*<p>Stateless Component Example</p>*/}
+          {/*  <ConfirmStateless*/}
+          {/*      open={this.state.confirmOpen}*/}
+          {/*      title="React and TypeScript"*/}
+          {/*      content="Are you sure you want to learn React and TypeScript?"*/}
+          {/*      cancelCaption="No way"*/}
+          {/*      okCaption="Yes please!"*/}
+          {/*      onCancelClick={this.handleCancelConfirmClick}*/}
+          {/*      onOkClick={this.handleOkConfirmClick}*/}
+          {/*  />*/}
+
+            <p>StatelFullComponent Example</p>
+            <ConfirmStateFull
+                open={this.state.confirmOpen}
+                title="React and TypeScript"
+                content="Are you sure you want to learn React and TypeScript?"
+                cancelCaption="No way"
+                okCaption="Yes please!"
+                onCancelClick={this.handleCancelConfirmClick}
+                onOkClick={this.handleOkConfirmClick}
+            />
         </div>
     )
   }

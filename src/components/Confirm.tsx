@@ -16,7 +16,8 @@ class ConfirmComponent  extends React.Component<Props> {
         cancelCaption: "Cancel",
         okCaption: "Okay"
     };
-    private  handleOkClick = () => {
+
+    private handleOkClick = () => {
         this.props.onOkClick();
     };
 

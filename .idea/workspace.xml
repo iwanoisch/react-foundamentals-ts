@@ -2,16 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f75a621-904e-4af0-98f5-f859e4898883" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Admin/AdminPage.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Product/ProductsData.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Product/ProductsPage.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Common/Header.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Common/Header.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Login/LoginPage.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/NotFoundPage/NotFoundPage.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Products/Product/ProductPage.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Products/ProductsPage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Confirm.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Confirm.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ConfirmStateFull.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ConfirmStateles.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Product/ProductsData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Products/ProductsData.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Product/ProductsPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Products/ProductsPage.tsx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

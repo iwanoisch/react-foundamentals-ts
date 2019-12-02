@@ -2,10 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f75a621-904e-4af0-98f5-f859e4898883" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Admin/AdminPage.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Product/ProductsData.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Product/ProductsPage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Confirm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Confirm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ConfirmStateFull.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ConfirmStateFull.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ConfirmStateles.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ConfirmStateles.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Confirm.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Confirm.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ConfirmStateFull.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ConfirmStateles.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,6 +38,11 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="vcs.TFVC" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ut82441\Desktop\remember\react-foundamentals-ts\src\Product" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">

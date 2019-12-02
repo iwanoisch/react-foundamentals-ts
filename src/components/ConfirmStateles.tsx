@@ -43,4 +43,11 @@ ConfirmStatelessOne.defaultProps = {
     okCaption: "Okay"
 };
 
-export const ConfirmStateless = ConfirmStatelessOne;
+
+// La memofunzione quindi esegue il rendering del componente solo se i suoi oggetti di scena cambiano.
+// Se esaminiamo l'app in esecuzione e la console, vedremo che il nostro componente non viene più visualizzato su ogni conto alla rovescia.
+// memo should be used with care, and only on components that are being rendered more than they need to be
+const ConfirmStateless = React.memo(ConfirmStatelessOne);
+export default ConfirmStateless;
+
+//export const ConfirmStateless = ConfirmStatelessOne;

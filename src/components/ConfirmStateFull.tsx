@@ -12,7 +12,7 @@ interface Props {
 }
 
 const ConfirmStateFullOne: React.FunctionComponent<Props> = props => {
-
+    // Dichiara una nuova variable di stato, che chiameremo "contatore"
     const [cancelClickCount, setCancelClickCount] = React.useState(0);
 
     // La funzione accetta una arrow function, che viene eseguita al primo rendering del componente.

@@ -12,6 +12,7 @@ interface Props {
 }
 
 class ConfirmComponent  extends React.Component<Props> {
+
     public static defaultProps = {
         cancelCaption: "Cancel",
         okCaption: "Okay"

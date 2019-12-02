@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f75a621-904e-4af0-98f5-f859e4898883" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Confirm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Confirm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ConfirmStateFull.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ConfirmStateFull.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ConfirmStateles.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ConfirmStateles.tsx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

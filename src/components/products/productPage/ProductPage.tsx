@@ -1,11 +1,12 @@
 import React from 'react';
-import { RouteComponentProps, Prompt } from "react-router-dom";
-import {mockProducts, Product} from "../ProductsData";
+import { RouteComponentProps } from "react-router-dom";
+import {IProduct, mockProducts} from "../ProductsData";
+import Product from "./product/Product";
 
 type Props = RouteComponentProps<{id:string}>;
 
 interface State {
-    product?: Product;
+    product?: IProduct;
     added: boolean;
 }
 
@@ -28,30 +29,15 @@ class ProductPageComponent extends React.Component<Props, State>{
 
     private handleAddClick = () => {
         this.setState({added: true});
-    };
-
-    private navAwayMessage = () => {
-       return 'Are you sure you leave without buying this product?';
-    };
-
+    }
 
 
     render() {
         const product = this.state.product;
         return (
             <div className="page-container">
-                <Prompt when={!this.state.added} message={this.navAwayMessage} />
                 {product? (
-                    <React.Fragment>
-                        <h1>{product.name}</h1>
-                        <p>{product.description}</p>
-                        <p className='prodct-price'>
-                            {new Intl.NumberFormat('en-US', {currency: 'USD', style: 'currency'}).format(product.price)}
-                        </p>
-                        {!this.state.added && (
-                            <button onClick={this.handleAddClick}>Add to basket</button>
-                        )}
-                    </React.Fragment>
+                   <Product  product={product} inBasket={this.state.added} onAddToBasket={this.handleAddClick} />
                 ) : (
                     <p>Product not found!</p>
                 )}

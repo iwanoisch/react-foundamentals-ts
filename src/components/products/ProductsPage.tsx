@@ -1,11 +1,11 @@
 import React from 'react';
-import {mockProducts, Product} from "./ProductsData";
+import {mockProducts, IProduct} from "./ProductsData";
 import {Link, RouteComponentProps} from "react-router-dom";
 
 import './ProductsPage.css'
 
 interface State {
-    products: Product[];
+    products: IProduct[];
     search: string;
 }
 

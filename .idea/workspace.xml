@@ -2,24 +2,44 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f75a621-904e-4af0-98f5-f859e4898883" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Admin/AdminPage.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Admin/AdminProducts/AdminProducts.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Admin/AdminUsers/AdminUser/AdminUser.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Admin/AdminUsers/AdminUsers.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Admin/AdminUsersData.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/tabs/Tabs.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/tabs/Tabs.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/tabs/tab/Tab.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/products/productPage/product/Product.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/products/productPage/product/Product.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Admin/AdminPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Admin/AdminPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Admin/AdminPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/admin/AdminPage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Admin/AdminPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/admin/AdminPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Admin/AdminProducts/AdminProducts.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/admin/adminProducts/AdminProducts.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Admin/AdminUsers/AdminUser/AdminUser.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/admin/adminUsers/adminUser/AdminUser.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Admin/AdminUsers/AdminUsers.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/admin/adminUsers/AdminUsers.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Admin/AdminUsersData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/admin/AdminUsersData.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Common/Header.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Common/Header.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Common/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Common/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Products/Product/ProductPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Products/Product/ProductPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Products/ProductsPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Products/ProductsPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Common/Header.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Header.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Common/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Login/LoginPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/login/LoginPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NotFoundPage/NotFoundPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/notFoundPage/NotFoundPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Products/Product/ProductPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/products/productPage/ProductPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Products/ProductsData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/products/ProductsData.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Products/ProductsPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/products/ProductsPage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Products/ProductsPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/products/ProductsPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -29,6 +49,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -46,6 +67,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ut82441\Desktop\remember\react-foundamentals-ts\src\components" />
       <recent name="C:\Users\ut82441\Desktop\remember\react-foundamentals-ts\src\Product" />
     </key>
   </component>
@@ -74,7 +96,7 @@
       <workItem from="1575040120282" duration="4324000" />
       <workItem from="1575128176787" duration="2942000" />
       <workItem from="1575218786206" duration="2694000" />
-      <workItem from="1575361162982" duration="9510000" />
+      <workItem from="1575361162982" duration="21571000" />
     </task>
     <servers />
   </component>

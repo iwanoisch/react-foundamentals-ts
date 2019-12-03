@@ -2,10 +2,10 @@ import React from 'react';
 import {NavLink, Route} from "react-router-dom";
 
 import './AdminPage.css'
-import {AdminProducts} from "./AdminProducts/AdminProducts";
-import {AdminUsers} from "./AdminUsers/AdminUsers";
+import {AdminProducts} from "./adminProducts/AdminProducts";
+import {AdminUsers} from "./adminUsers/AdminUsers";
 
-class AdminPageComponent extends React.Component {
+class AdminPage extends React.Component {
 
 
     render(): React.ReactNode {
@@ -31,5 +31,5 @@ class AdminPageComponent extends React.Component {
     }
 }
 
-export const AdminPage = AdminPageComponent;
+export default AdminPage ;
 

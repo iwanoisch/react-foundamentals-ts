@@ -2,7 +2,7 @@ import React from 'react';
 import {NavLink, RouteComponentProps, withRouter} from "react-router-dom";
 
 import './Header.css'
-import logo from "../../src/logo.svg"
+import logo from "../../../src/logo.svg"
 
 
 

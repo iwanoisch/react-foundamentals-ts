@@ -1,7 +1,7 @@
 import React from "react";
 import {mockAdminusersData, User} from "../AdminUsersData";
 import {NavLink, Route} from "react-router-dom";
-import {AdminUser} from "./AdminUser/AdminUser";
+import {AdminUser} from "./adminUser/AdminUser";
 
 export interface State {
     adminUserData: User[];

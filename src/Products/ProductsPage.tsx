@@ -40,7 +40,7 @@ class ProductsPageComponent extends React.Component<RouteComponentProps, State>{
                 </p>
                 <ul className="product-list">
                     {this.state.products.map(product => {
-                        if(!this.state.search || (this.state.search &&  product.name.toLowerCase().indexOf(this.state.search.toLowerCase()) > -1)) {
+                        if(!this.state.search || (this.state.search && product.name.toLowerCase().indexOf(this.state.search.toLowerCase()) > -1)) {
                             return (
                                 <li key={product.id} className="product-list-item">
                                     <Link to={`/products/${product.id}`}> {product.name}</Link>

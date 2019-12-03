@@ -1,15 +1,34 @@
 import React from 'react';
-import {NavLink, RouteComponentProps} from "react-router-dom";
+import {NavLink, RouteComponentProps, withRouter} from "react-router-dom";
 
 import './Header.css'
 import logo from "../../src/logo.svg"
 
 
-class HeaderComponent extends React.Component {
 
-    render(): React.ReactNode {
+const Header: React.FunctionComponent<RouteComponentProps> = props => {
+// class HeaderComponent extends React.Component {
+    const [search, setSearch] = React.useState('');
+    React.useEffect(() => {
+        const searchParams = new URLSearchParams(props.location.search);
+        setSearch(searchParams.get('search') || '');
+    }, []);
+
+    const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setSearch(e.currentTarget.value);
+    };
+
+    const handleSearchKeydown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+        if(e.key === 'Enter') {
+            props.history.push(`/products?search=${search}`);
+        }
+    };
+
         return (
           <header className='header'>
+              <div className='search-container'>
+                  <input type="search" placeholder='search' value={search}  onChange={handleSearchChange} onKeyDown={handleSearchKeydown} />
+              </div>
               <img src={logo} className="header-logo" alt="logo" />
               <h1 className="header-title">React Shop</h1>
               <nav>
@@ -18,8 +37,7 @@ class HeaderComponent extends React.Component {
               </nav>
           </header>
         )
-    }
-}
+};
 
-export const Header = HeaderComponent;
-
+export default withRouter(Header);
+//export const Header = HeaderComponent;

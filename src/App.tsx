@@ -3,7 +3,7 @@ import './App.css';
 import {BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 import {ProductsPage} from './Products/ProductsPage';
 import {AdminPage} from  './Admin/AdminPage';
-import {Header} from "./Common/Header";
+import Header from "./Common/Header";
 import {ProductPage} from "./Products/Product/ProductPage";
 import {NotFoundPage} from "./NotFoundPage/NotFoundPage";
 import {LoginPage} from "./Login/LoginPage";
@@ -12,8 +12,7 @@ import {LoginPage} from "./Login/LoginPage";
 // class AppContent extends React.Component<{}, State> = state => {
 const AppContent: React.FunctionComponent = () => {
 
-    const [loggedIn, setLoggedIn] = React.useState(true
-    );
+    const [loggedIn, setLoggedIn] = React.useState(true);
 
     return (
         <BrowserRouter>

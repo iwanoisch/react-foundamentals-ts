@@ -37,15 +37,7 @@ class ContactUsPageComponent extends React.Component<{}, State> {
         return (
             <div className='page-container'>
                 <div>contact</div>
-                <ContactUs
-                    email={this.state.email}
-                    name={this.state.name}
-                    notes={this.state.notes}
-                    reason={this.state.reason}
-                    onNameChange={this.handleNameChange}
-                    onEmailChange={this.handleEmailChange}
-                    onReasonChange={this.handleReasonChange}
-                    onNotesChange={this.handleNotesChange} />
+                <ContactUs />
             </div>
         );
     }

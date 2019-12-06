@@ -28,4 +28,8 @@ code {
   padding: 5px;
 }
 
-
+.page-container {
+  text-align: center;
+  padding: 20px;
+  font-size: large;
+}

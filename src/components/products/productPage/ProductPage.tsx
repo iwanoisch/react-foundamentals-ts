@@ -27,13 +27,9 @@ class ProductPageComponent extends React.Component<Props, State>{
             const id: number = parseInt(this.props.match.params.id, 10);
             const product = mockProducts.filter( p => p.id === id)[0];
             this.setState({product: product},() =>{ console.log('productstate', this.state.product)});
-            //setTimeout(this.testLoader, 1000);
         }
     }
 
-    public componentWillUnmount() {
-        this.componentUnloaded = true;
-    }
 
     private testLoader() {
         return this.setState({loading: false})

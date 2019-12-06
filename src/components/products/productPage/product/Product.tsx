@@ -21,6 +21,7 @@ const Product: React.FunctionComponent<Props> = props => {
     if (!product) {
         return null
     }
+
     return (
         <React.Fragment>
             <h1>{product.name}</h1>

@@ -9,6 +9,7 @@ import {ProductPage} from "./components/products/productPage/ProductPage";
 import {NotFoundPage} from "./components/notFoundPage/NotFoundPage";
 import {LoginPage} from "./components/login/LoginPage";
 import './App.css';
+import {ContactUsPage} from "./components/contactUsPage/ContactUsPage";
 
 
 const AdminPage = React.lazy(() => import('./components/admin/AdminPage'));
@@ -17,6 +18,7 @@ const AdminPage = React.lazy(() => import('./components/admin/AdminPage'));
 // class AppContent extends React.Component<{}, State> = state => {
 const AppContent: React.FunctionComponent<RouteComponentProps> = props => {
 
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const [loggedIn, setLoggedIn] = React.useState(true);
         return (
                 <div>
@@ -26,6 +28,7 @@ const AppContent: React.FunctionComponent<RouteComponentProps> = props => {
                             <Switch>
                                 <Redirect exact={true} from='/' to='/products'/>
                                 <Route exact={true} path='/products' component={ProductsPage}/>
+                                <Route path='/contactus' component={ContactUsPage} />
                                 <Route path='/products/:id' component={ProductPage}/>
                                 <Route path='/admin'>
                                     {loggedIn ?

@@ -3,9 +3,10 @@ import * as React from "react";
 import './Product.css'
 import {IProduct} from "../../ProductsData";
 import {Tabs} from "../../../common/tabs/Tabs";
+import WithLoader from "../../../common/loader/WithLoader";
 
 interface Props {
-   product: IProduct;
+   product?: IProduct;
    inBasket: boolean;
    onAddToBasket: () => void;
 }
@@ -17,6 +18,9 @@ const Product: React.FunctionComponent<Props> = props => {
         props.onAddToBasket();
     };
 
+    if (!product) {
+        return null
+    }
     return (
         <React.Fragment>
             <h1>{product.name}</h1>
@@ -56,4 +60,4 @@ const Product: React.FunctionComponent<Props> = props => {
     )
 }
 
-export default Product
+export default WithLoader(Product)

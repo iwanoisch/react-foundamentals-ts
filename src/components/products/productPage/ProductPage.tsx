@@ -8,6 +8,7 @@ type Props = RouteComponentProps<{id:string}>;
 interface State {
     product?: IProduct;
     added: boolean;
+    loading: boolean;
 }
 
 class ProductPageComponent extends React.Component<Props, State>{
@@ -15,29 +16,41 @@ class ProductPageComponent extends React.Component<Props, State>{
     constructor(props: Props) {
         super(props);
         this.state = {
-            added: false
+            added: false,
+            loading: true
         }
     }
+    private componentUnloaded: boolean = false;
 
     public componentDidMount() {
         if(this.props.match.params.id) {
             const id: number = parseInt(this.props.match.params.id, 10);
             const product = mockProducts.filter( p => p.id === id)[0];
-            this.setState({product: product}, () =>{ console.log('productstate', this.state.product)});
+            this.setState({product: product},() =>{ console.log('productstate', this.state.product)});
+            //setTimeout(this.testLoader, 1000);
         }
     }
 
+    public componentWillUnmount() {
+        this.componentUnloaded = true;
+    }
+
+    private testLoader() {
+        return this.setState({loading: false})
+    }
+
+
     private handleAddClick = () => {
         this.setState({added: true});
-    }
+    };
 
 
     render() {
         const product = this.state.product;
         return (
             <div className="page-container">
-                {product? (
-                   <Product  product={product} inBasket={this.state.added} onAddToBasket={this.handleAddClick} />
+                {product || this.state.loading ? (
+                   <Product loading={this.state.loading}  product={product} inBasket={this.state.added} onAddToBasket={this.handleAddClick} />
                 ) : (
                     <p>Product not found!</p>
                 )}

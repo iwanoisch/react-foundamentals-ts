@@ -17,7 +17,7 @@ class ProductPageComponent extends React.Component<Props, State>{
         super(props);
         this.state = {
             added: false,
-            loading: true
+            loading: false
         }
     }
     private componentUnloaded: boolean = false;

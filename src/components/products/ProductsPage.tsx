@@ -1,46 +1,37 @@
 import React from 'react';
 import {mockProducts, IProduct} from "./ProductsData";
+import { RouteChildrenProps } from 'react-router';
 import {Link, RouteComponentProps} from "react-router-dom";
 
 import './ProductsPage.css'
+import {getProducts} from "../../store/ProductsActions";
+import {ApplicationState, AppState} from "../../store/Store";
+import {connect} from "react-redux";
 
-interface State {
+interface Props extends RouteChildrenProps{
+    getProducts: typeof getProducts;
+    loading: boolean;
     products: IProduct[];
     search: string;
 }
 
-class ProductsPageComponent extends React.Component<RouteComponentProps, State>{
-    constructor(props: RouteComponentProps){
-        super(props);
-        this.state = {
-            products: [],
-            search: '',
-        };
-    }
+class ProductsPageComponent extends React.Component<Props>{
 
     public componentDidMount() {
-        this.setState({products: mockProducts})
-    }
-
-    public static getDerivedStateFromProps(props: RouteComponentProps, state: State) {
-        const searchParams = new URLSearchParams(props.location.search);
-        const search = searchParams.get('search') || '';
-        return {
-            products: state.products,
-            search
-
-        }
+        this.props.getProducts();
     }
 
     render(): React.ReactNode {
+        const searchParams = new URLSearchParams(this.props.location.search);
+        const search = searchParams.get("search")  || "";
         return (
             <div className="page-container">
                 <p>
                     Welcome to React Shop where you can get all your tools for ReactJS!
                 </p>
                 <ul className="product-list">
-                    {this.state.products.map(product => {
-                        if(!this.state.search || (this.state.search && product.name.toLowerCase().indexOf(this.state.search.toLowerCase()) > -1)) {
+                    {this.props.products.map(product => {
+                        if(!search || (search && product.name.toLowerCase().indexOf(search.toLowerCase()) > -1)) {
                             return (
                                 <li key={product.id} className="product-list-item">
                                     <Link to={`/products/${product.id}`}> {product.name}</Link>
@@ -56,5 +47,20 @@ class ProductsPageComponent extends React.Component<RouteComponentProps, State>{
     }
 }
 
-export const ProductsPage = ProductsPageComponent;
+function mapStateToProps(state: AppState) {
+    return {
+        loading: state.products.productsLoading,
+        products: state.products.products
+    }
+}
+
+function mapDispatchToProps(dispatch: any) {
+    return {
+       getProducts: () => dispatch(getProducts())
+    }
+}
+
+
+
+export const ProductsPage = connect(mapStateToProps, mapDispatchToProps)(ProductsPageComponent);
 

@@ -2,14 +2,22 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import { App } from './App';
+import {Store} from "redux";
+import {AppState, configureStore} from "./store/Store";
+import {Provider} from "react-redux";
 
 interface Props {
+    store: Store<AppState>
 }
 
-const Root: React.FunctionComponent<Props>= () => {
+const Root: React.FunctionComponent<Props>= props => {
     return(
-        <App />
+        <Provider store={props.store}>
+            <App />
+        </Provider>
         )
 };
 
-ReactDOM.render(<Root />, document.getElementById('root') as HTMLElement);
+const store = configureStore();
+
+ReactDOM.render(<Root  store={store}/>, document.getElementById('root') as HTMLElement);

@@ -1,25 +1,26 @@
-import {GET_ALL, LOADING, ProductsActions, ProductState} from "./ProductsTypes";
+import {GET_ALL, LOADING_DONE, ProductsActionsType, ProductsState,} from "./ProductsTypes";
 
-const initialProductState: ProductState = {
-    products: [],
-    productsLoading: false
+
+const initialProductState: ProductsState = {
+    products: null,
+    loading: false
 };
 
 export function productsReducer(
     state = initialProductState,
-    action: ProductsActions
-): ProductState {
+    action: ProductsActionsType
+): ProductsState {
     switch (action.type) {
-        case LOADING:
+        case LOADING_DONE:
             return {
                 ...state,
-                productsLoading: true,
+                loading: true,
             };
         case GET_ALL:
             return {
                 ...state,
-                products: action.products,
-                productsLoading: false,
+                products: action.payload.products,
+                loading: false,
             };
         default:
             return  state

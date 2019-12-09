@@ -6,29 +6,30 @@ import {IProduct} from "../components/products/ProductsData";
 // }
 
 
-export interface  ProductState {
+export interface ProductsState {
     loading: boolean ;
-    search: string | null;
     products: IProduct[] | null;
 }
 
 // Actions
-export const LOADING = 'LOADING';
+export const LOADING_DONE = 'LOADING_DONE';
 export const GET_ALL = 'GET_ALL';
 
 
 export interface ProductsGetAllAction {
     type: typeof GET_ALL;
-    products: IProduct[]
+    payload: {
+        products: IProduct[] | null;
+    }
 }
 
 export interface ProductsLoadingAction {
-    type: typeof LOADING;
+    type: typeof LOADING_DONE;
 }
 
-export type ProductsActions = ProductsGetAllAction | ProductsLoadingAction
+export type ProductsActionsType = ProductsGetAllAction | ProductsLoadingAction
 
-export interface ProductState {
-    readonly products: IProduct[];
-    readonly productsLoading: boolean;
-}
+// export interface ProductState {
+//     readonly products: IProduct[];
+//     readonly productsLoading: boolean;
+// }

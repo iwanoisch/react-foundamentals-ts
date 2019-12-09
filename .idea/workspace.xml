@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7f75a621-904e-4af0-98f5-f859e4898883" name="Default Changelist" comment="" />
+    <list default="true" id="7f75a621-904e-4af0-98f5-f859e4898883" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/contactUsPage/contactUs/ContactUs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/contactUsPage/contactUs/ContactUs.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/products/ProductsData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/products/ProductsData.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/products/ProductsPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/products/ProductsPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/ProductReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/ProductReducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/ProductsActions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/ProductsActions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/ProductsTypes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/ProductsTypes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/Store.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/Store.tsx" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

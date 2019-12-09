@@ -1,10 +1,10 @@
 import {applyMiddleware, combineReducers, compose, createStore, Store} from "redux";
-import {ProductState} from "./ProductsTypes";
+import {ProductsState} from "./ProductsTypes";
 import {productsReducer} from "./ProductReducer";
 import thunk from "redux-thunk";
 
 export interface ApplicationState {
-    products: ProductState
+    products: ProductsState
 }
 
 const rootReducer = combineReducers<ApplicationState>({

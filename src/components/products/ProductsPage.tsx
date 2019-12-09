@@ -1,17 +1,17 @@
 import React from 'react';
-import {mockProducts, IProduct} from "./ProductsData";
+import {IProduct} from "./ProductsData";
 import { RouteChildrenProps } from 'react-router';
-import {Link, RouteComponentProps} from "react-router-dom";
+import {Link} from "react-router-dom";
 
 import './ProductsPage.css'
 import {getProducts} from "../../store/ProductsActions";
-import {ApplicationState, AppState} from "../../store/Store";
+import {AppState} from "../../store/Store";
 import {connect} from "react-redux";
 
 interface Props extends RouteChildrenProps{
     getProducts: typeof getProducts;
     loading: boolean;
-    products: IProduct[];
+    products: IProduct[] | null;
     search: string;
 }
 
@@ -24,7 +24,7 @@ class ProductsPageComponent extends React.Component<Props>{
     render(): React.ReactNode {
         const searchParams = new URLSearchParams(this.props.location.search);
         const search = searchParams.get("search")  || "";
-        return (
+        return !this.props.products ? (<div className="page-container">Loading...</div>) : (
             <div className="page-container">
                 <p>
                     Welcome to React Shop where you can get all your tools for ReactJS!
@@ -49,7 +49,7 @@ class ProductsPageComponent extends React.Component<Props>{
 
 function mapStateToProps(state: AppState) {
     return {
-        loading: state.products.productsLoading,
+        loading: state.products.loading,
         products: state.products.products
     }
 }

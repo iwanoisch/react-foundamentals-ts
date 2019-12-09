@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f75a621-904e-4af0-98f5-f859e4898883" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/common/form/Form.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/contactUsPage/ContactUsPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/contactUsPage/ContactUsPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/contactUsPage/contactUs/ContactUs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/contactUsPage/contactUs/ContactUs.tsx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -79,7 +76,8 @@
       <workItem from="1575449665788" duration="3997000" />
       <workItem from="1575469782968" duration="6625000" />
       <workItem from="1575536243283" duration="2509000" />
-      <workItem from="1575621262873" duration="17583000" />
+      <workItem from="1575621262873" duration="18006000" />
+      <workItem from="1575882592764" duration="260000" />
     </task>
     <servers />
   </component>

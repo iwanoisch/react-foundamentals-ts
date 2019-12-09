@@ -1,21 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7f75a621-904e-4af0-98f5-f859e4898883" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/products/Old_Learn_ProductsPage.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/ProductReducer.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/ProductsActions.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/ProductsTypes.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/Store.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/contactUsPage/contactUs/ContactUs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/contactUsPage/contactUs/ContactUs.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/products/ProductsData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/products/ProductsData.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/products/ProductsPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/products/ProductsPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/products/productPage/ProductPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/products/productPage/ProductPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
-    </list>
+    <list default="true" id="7f75a621-904e-4af0-98f5-f859e4898883" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +79,7 @@
       <workItem from="1575469782968" duration="6625000" />
       <workItem from="1575536243283" duration="2509000" />
       <workItem from="1575621262873" duration="18006000" />
-      <workItem from="1575882592764" duration="15433000" />
+      <workItem from="1575882592764" duration="16046000" />
     </task>
     <servers />
   </component>

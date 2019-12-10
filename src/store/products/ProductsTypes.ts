@@ -1,19 +1,15 @@
-import {IProduct} from "../components/products/ProductsData";
-
-// export enum ProductActionTypes {
-//     GET_ALL = 'GET_ALL',
-//     LOADING = 'LOADING'
-// }
-
+import {IProduct} from "../../components/products/ProductsData";
 
 export interface ProductsState {
-    loading: boolean ;
+    product: IProduct | null;
     products: IProduct[] | null;
+    loading: boolean ;
 }
 
 // Actions
 export const LOADING_DONE = 'LOADING_DONE';
 export const GET_ALL = 'GET_ALL';
+export const GET_SINGLE = 'GET_SINGLE';
 
 
 export interface ProductsGetAllAction {
@@ -27,7 +23,14 @@ export interface ProductsLoadingAction {
     type: typeof LOADING_DONE;
 }
 
-export type ProductsActionsType = ProductsGetAllAction | ProductsLoadingAction
+export interface ProductSingleAction {
+    type: typeof GET_SINGLE;
+    payload: {
+        product: IProduct | null;
+    }
+}
+
+export type ProductsActionsType = ProductsGetAllAction | ProductsLoadingAction | ProductSingleAction
 
 // export interface ProductState {
 //     readonly products: IProduct[];

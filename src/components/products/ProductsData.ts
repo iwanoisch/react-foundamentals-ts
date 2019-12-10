@@ -16,6 +16,12 @@ export const getAllProducts = async (): Promise<IProduct[]> => {
     return mockProducts;
 };
 
+export const getSingleProduct = async (id: number): Promise<IProduct | null> => {
+    await wait(1000);
+    const foundProducts = mockProducts.filter(product => product.id === id);
+    return foundProducts.length === 0 ? null : foundProducts[0]
+}
+
 const wait = (ms: number): Promise<void> => {
     return new Promise(resolve => setTimeout(resolve, ms));
 };

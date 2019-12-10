@@ -1,12 +1,14 @@
-import {ActionCreator, AnyAction, Dispatch} from "redux";
 import {
-    GET_ALL, LOADING_DONE, ProductsActionsType,
-    ProductsGetAllAction,
+    GET_ALL,
+    GET_SINGLE,
+    LOADING_DONE,
+    ProductsActionsType,
     ProductsLoadingAction,
-    ProductsState,
+    ProductsState
 } from "./ProductsTypes";
-import { ThunkAction, ThunkDispatch } from "redux-thunk";
-import {getAllProducts} from "../components/products/ProductsData";
+import { ThunkDispatch } from "redux-thunk";
+import {getAllProducts, getSingleProduct} from "../../components/products/ProductsData";
+
 
 
 
@@ -27,7 +29,27 @@ export function getProducts() {
     }
 }
 
-// export const getProduct: ActionCreator<ThunkAction<Promise<AnyAction>, ProductState, null, ProductsGetAllAction>> = () => {
+export function getProduct(id: number) {
+    return async (dispatch: ProductsDispatch) => {
+        dispatch(load());
+        const product = await getSingleProduct(id);
+        return dispatch({
+            payload: {
+                product: product
+            },
+            type: GET_SINGLE,
+        })
+    }
+}
+
+// altro modo
+export function load(): ProductsLoadingAction {
+    return {
+        type: LOADING_DONE
+    }
+}
+
+// export const getPProduct: ActionCreator<ThunkAction<Promise<AnyAction>, ProductState, null, ProductsGetAllAction>> = () => {
 //     return async (dispatch: Dispatch) => {
 //         dispatch(loading());
 //         const products = await getProducts();
@@ -43,12 +65,3 @@ export function getProducts() {
 // const loading: ActionCreator<ProductsLoadingAction> = ()  => ({
 //         type: LOADING
 // });
-
-// altro modo
-export function load(): ProductsLoadingAction {
-    return {
-        type: LOADING_DONE
-    }
-}
-
-

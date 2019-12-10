@@ -1,59 +1,69 @@
-import React from 'react';
+import * as React from 'react';
 import { RouteComponentProps } from "react-router-dom";
-import {IProduct, mockProducts} from "../ProductsData";
+import {IProduct} from "../ProductsData";
 import Product from "./product/Product";
+import {addToBasket} from "../../../store/basket/BasketActions";
+// @ts-ignore
+import {getProduct} from "../../../store/products/ProductsActions";
+import {connect} from "react-redux";
+import {AppState} from "../../../store/Store";
 
-type Props = RouteComponentProps<{id:string}>;
 
-interface State {
-    product?: IProduct;
-    added: boolean;
+interface Props extends RouteComponentProps<{id:string}>{
+    addToBasket: typeof addToBasket;
+    getProduct: typeof getProduct;
     loading: boolean;
+    product?: IProduct | null;
+    added: boolean;
 }
 
-class ProductPageComponent extends React.Component<Props, State>{
-
-    constructor(props: Props) {
-        super(props);
-        this.state = {
-            added: false,
-            loading: false
-        }
-    }
-    private componentUnloaded: boolean = false;
+class ProductPageComponent extends React.Component<Props> {
 
     public componentDidMount() {
-        if(this.props.match.params.id) {
+        if (this.props.match.params.id) {
             const id: number = parseInt(this.props.match.params.id, 10);
-            const product = mockProducts.filter( p => p.id === id)[0];
-            this.setState({product: product},() =>{ console.log('productstate', this.state.product)});
+            this.props.getProduct(id);
         }
     }
-
-
-    private testLoader() {
-        return this.setState({loading: false})
-    }
-
-
-    private handleAddClick = () => {
-        this.setState({added: true});
-    };
-
-
-    render() {
-        const product = this.state.product;
+    public render() {
+        const product = this.props.product;
         return (
             <div className="page-container">
-                {product || this.state.loading ? (
-                   <Product loading={this.state.loading}  product={product} inBasket={this.state.added} onAddToBasket={this.handleAddClick} />
+                {product || this.props.loading ? (
+                    <Product loading={this.props.loading} product={product!} inBasket={this.props.added}
+                             onAddToBasket={this.handleAddClick}/>
                 ) : (
                     <p>Product not found!</p>
                 )}
             </div>
-        )
+        );
+    }
+
+        private handleAddClick = () => {
+            if (this.props.product) {
+                this.props.addToBasket(this.props.product);
+            }
+        };
+
+
+
+}
+
+function mapStateToProps(state: AppState) {
+    return {
+        added: state.basket.products!.some(product => state.products.product ? product.id === state.products.product.id : false),
+        product: state.products.product,
+        loading: state.products.loading,
+        basketProducts: state.basket.products,
+    };
+}
+
+function mapDispatchToProps(dispatch: any) {
+    return {
+        addToBasket: (product: IProduct | null) => dispatch(addToBasket(product)),
+        getProduct: (id: number ) => dispatch(getProduct(id))
     }
 }
 
-export const ProductPage = ProductPageComponent;
+export const ProductPage = connect(mapStateToProps, mapDispatchToProps)(ProductPageComponent);
 

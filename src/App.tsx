@@ -5,13 +5,12 @@ import {CSSTransition, TransitionGroup} from "react-transition-group";
 
 import {ProductsPage} from './components/products/ProductsPage';
 import Header from "./components/common/Header";
-import {ProductPage} from "./components/products/productPage/ProductPage";
+
 import {NotFoundPage} from "./components/notFoundPage/NotFoundPage";
 import {LoginPage} from "./components/login/LoginPage";
 import './App.css';
 import {ContactUsPage} from "./components/contactUsPage/ContactUsPage";
-
-
+import {ProductPage} from "./components/products/productPage/ProductPage";
 const AdminPage = React.lazy(() => import('./components/admin/AdminPage'));
 
 // const ConfirmStateFullOne: React.FunctionComponent<Props> = props => {

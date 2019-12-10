@@ -2,14 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f75a621-904e-4af0-98f5-f859e4898883" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/basket/Basket.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/basket/Basket.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/products/productPage/Old_Learn_ProductPage.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/products/productPage/productList/ProductList.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/basket/BasketActions.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/basket/BasketReducer.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/basket/BasketTypes.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/contactUsPage/contactUs/ContactUs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/contactUsPage/contactUs/ContactUs.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Header.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Header.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Header.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/products/ProductsData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/products/ProductsData.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/products/ProductsPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/products/ProductsPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/ProductReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/ProductReducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/ProductsActions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/ProductsActions.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/ProductsTypes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/ProductsTypes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/products/productPage/ProductPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/products/productPage/ProductPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/ProductReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/products/ProductReducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/ProductsActions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/products/ProductsActions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/ProductsTypes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/products/ProductsTypes.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/Store.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/Store.tsx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -55,6 +64,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ut82441\Desktop\remember\react-foundamentals-ts\src\store\Products" />
       <recent name="C:\Users\ut82441\Desktop\remember\react-foundamentals-ts\src\components" />
       <recent name="C:\Users\ut82441\Desktop\remember\react-foundamentals-ts\src\Product" />
     </key>
@@ -90,6 +100,7 @@
       <workItem from="1575536243283" duration="2509000" />
       <workItem from="1575621262873" duration="18006000" />
       <workItem from="1575882592764" duration="16046000" />
+      <workItem from="1575967447022" duration="20839000" />
     </task>
     <servers />
   </component>

@@ -1,12 +1,13 @@
 import * as React from 'react';
 import { RouteComponentProps } from "react-router-dom";
 import {IProduct} from "../ProductsData";
-import Product from "./product/Product";
+
 import {addToBasket} from "../../../store/basket/BasketActions";
 // @ts-ignore
 import {getProduct} from "../../../store/products/ProductsActions";
 import {connect} from "react-redux";
 import {AppState} from "../../../store/Store";
+import Product from "./product/Product";
 
 
 interface Props extends RouteComponentProps<{id:string}>{

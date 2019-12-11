@@ -3,6 +3,7 @@ import {NavLink, Route} from "react-router-dom";
 
 import './AdminPage.css'
 import {AdminProducts} from "./adminProducts/AdminProducts";
+import {AdminPeople} from "./adminPeople/AdminPeople";
 import {AdminUsers} from "./adminUsers/AdminUsers";
 
 class AdminPage extends React.Component {
@@ -23,9 +24,15 @@ class AdminPage extends React.Component {
                            Products
                        </NavLink>
                    </li>
+                   <li key='products'>
+                       <NavLink to={`/admin/people`} activeClassName='admin-link-active'>
+                           People
+                       </NavLink>
+                   </li>
                </ul>
                 <Route path='/admin/users' component={AdminUsers} />
                 <Route path='/admin/products' component={AdminProducts} />
+                <Route path='/admin/people' component={AdminPeople} />
             </div>
         )
     }

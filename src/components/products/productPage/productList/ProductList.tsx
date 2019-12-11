@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { RouteChildrenProps } from 'react-router';
 import {IProduct} from "../../ProductsData";
 import {Link} from "react-router-dom";
 import WithLoader from "../../../common/loader/WithLoader";

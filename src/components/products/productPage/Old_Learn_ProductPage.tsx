@@ -55,5 +55,5 @@ class ProductPageComponent extends React.Component<Props, State>{
     }
 }
 
-export const ProductPage = ProductPageComponent;
+export const ProductPageOld = ProductPageComponent;
 

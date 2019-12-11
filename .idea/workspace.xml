@@ -2,7 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f75a621-904e-4af0-98f5-f859e4898883" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/admin/adminPeople/AdminPeople.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/products/productPage/product/ProductType.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/admin/AdminPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/admin/AdminPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/products/productPage/Old_Learn_ProductPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/products/productPage/Old_Learn_ProductPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/products/productPage/ProductPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/products/productPage/ProductPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/products/productPage/product/Product.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/products/productPage/product/Product.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/products/productPage/product/Product.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/products/productPage/product/Product.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/products/productPage/productList/ProductList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/products/productPage/productList/ProductList.tsx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -64,6 +72,23 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.build" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -84,7 +109,7 @@
       <workItem from="1575621262873" duration="18006000" />
       <workItem from="1575882592764" duration="16046000" />
       <workItem from="1575967447022" duration="20839000" />
-      <workItem from="1576054615283" duration="594000" />
+      <workItem from="1576054615283" duration="11739000" />
     </task>
     <servers />
   </component>

@@ -2,10 +2,12 @@ import {applyMiddleware, combineReducers, compose, createStore, Store} from "red
 import {productsReducer} from "./products/ProductReducer";
 import thunk from "redux-thunk";
 import {basketReducer} from "./basket/BasketReducer";
+import {adminPeopleReducer} from "./admin/AdminPeoplesReducer";
 
 const rootReducer = combineReducers({
     products: productsReducer,
     basket: basketReducer,
+    adminPeople: adminPeopleReducer,
 });
 
 export type AppState = ReturnType<typeof  rootReducer>

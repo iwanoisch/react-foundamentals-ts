@@ -24,7 +24,7 @@ class AdminPage extends React.Component {
                            Products
                        </NavLink>
                    </li>
-                   <li key='products'>
+                   <li key='people'>
                        <NavLink to={`/admin/people`} activeClassName='admin-link-active'>
                            People
                        </NavLink>

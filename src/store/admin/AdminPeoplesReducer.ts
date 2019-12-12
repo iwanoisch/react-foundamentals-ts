@@ -1,8 +1,8 @@
-import {AdminPeoplesState, AdminPeoplesActionsTypes} from "./AdminPeoplesTypes";
+import {AdminPeoplesActionsTypes, AdminPeoplesState, GET_ALL_PEOPLE, LOADING_STATUS_DONE} from "./AdminPeoplesTypes";
 
 const initialAdminPeopleState: AdminPeoplesState = {
     peoples: null,
-    isLoading: false
+    loading: false
 };
 
 export function adminPeopleReducer(
@@ -10,16 +10,16 @@ export function adminPeopleReducer(
     action: AdminPeoplesActionsTypes
 ): AdminPeoplesState {
     switch (action.type) {
-        case "LOADING_STATUS_DONE":
+        case LOADING_STATUS_DONE:
             return {
                 ...state,
-                isLoading: true,
+                loading: true,
             };
-        case "GET_PEOPLE":
+        case GET_ALL_PEOPLE:
             return {
                 ...state,
                 peoples: action.payload.peoples,
-                isLoading: false
+                loading: false
             };
         default:
             return state

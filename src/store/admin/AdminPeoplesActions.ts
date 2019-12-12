@@ -4,22 +4,22 @@ import {
     AdminPeoplesState,
     AdminPeoplesActionsTypes,
     GET_ALL_PEOPLE,
-    LOADING_STATUS_DONE,
-    People
+    People, LOADING_STATUS_DONE
 } from "./AdminPeoplesTypes";
 import {restapi} from "../restapi/restapi";
+import {LOADING_DONE} from "../products/ProductsTypes";
 
 type AdminPeoplesDispatch = ThunkDispatch<AdminPeoplesState, undefined, AdminPeoplesActionsTypes>
 
 export function getPeoples() {
     return async (dispatch: AdminPeoplesDispatch) => {
-        dispatch(isLoading());
+        dispatch(loading());
         const res = await restapi.get('/users');
         dispatch(getPeoplesDone(res.data))
     }
 }
 
-export function isLoading(): AdminPeopleLoadingAction {
+export function loading(): AdminPeopleLoadingAction {
     return {
         type: LOADING_STATUS_DONE
     }

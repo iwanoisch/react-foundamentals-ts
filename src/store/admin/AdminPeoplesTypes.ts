@@ -1,7 +1,8 @@
+import {LOADING_DONE} from "../products/ProductsTypes";
 
 export interface AdminPeoplesState {
     peoples: People[] | null;
-    isLoading: boolean ;
+    loading: boolean ;
 }
 
 // Actions
@@ -25,9 +26,9 @@ export type AdminPeoplesActionsTypes = AdminPeopleGetAllAction | AdminPeopleLoad
 export interface People {
     id: number,
     name: string,
-    nomeUtente: string,
+    username: string,
     email: string,
-    indirizzo: {
+    address: {
         street: string,
         suite: string,
         citta: string,

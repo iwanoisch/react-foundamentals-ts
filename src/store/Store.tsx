@@ -14,6 +14,8 @@ export type AppState = ReturnType<typeof  rootReducer>
 
 export function configureStore(): Store<AppState> {
     const w: any = window as any;
-    const composeEnhancers: any = w.__REDUX_DEVTOOLS_EXTENTION_COMPOSE__ ? w.__REDUX_DEVTOOLS_EXTENTION_COMPOSE__: (f: any) => f || compose;
+    //const composeEnhancers: any = w.__REDUX_DEVTOOLS_EXTENTION_COMPOSE__ ? w.__REDUX_DEVTOOLS_EXTENTION_COMPOSE__: (f: any) => f || compose;
+    const composeEnhancers = (typeof window !== 'undefined' && w.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) || compose;
+
     return createStore(rootReducer, undefined, composeEnhancers(applyMiddleware(thunk)))
 }

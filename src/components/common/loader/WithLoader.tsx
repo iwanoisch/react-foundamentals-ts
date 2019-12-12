@@ -10,6 +10,7 @@ interface Props {
 const WithLoader = <P extends object>(Component: React.ComponentType<P>): React.FC<P & Props> => (props: P & Props) =>
     props.loading ? (
         <div className="loader-overlay">
+            {console.log('withdload')}
             <div className="loader-circle-wrap">
                 <div className="loader-circle" />
             </div>
